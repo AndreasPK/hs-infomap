@@ -126,4 +126,4 @@ findCliques input =
 
     in undefined
     where
-        go () = ()
+        go () = (   )

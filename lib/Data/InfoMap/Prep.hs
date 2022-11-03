@@ -37,7 +37,7 @@ matrixFromGraph gr =
 stateProbability :: Matrix Freq -> V
 stateProbability m = perron (unsafeCoerce m)
 
--- Update frequencies
+-- Update frequencies.
 normFreq :: DynGraph gr => gr n Freq -> gr n Freq
 normFreq gr =
     let m = matrixFromGraph gr
