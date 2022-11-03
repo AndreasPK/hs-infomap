@@ -18,15 +18,21 @@ common warnings
 library
     import:           warnings
     exposed-modules:
-        MyLib,
-        Example
+        Data.InfoMap,
+        Data.InfoMap.Prep,
+        Data.InfoMap.Types,
+        -- MyLib,
+        -- Example
     -- other-modules:
     -- other-extensions:
     build-depends:
-        base ^>=4.17.0.0
+        base >=4.15.0.0
         , containers
         , hashable
         , fgl
+        , markov-chain-usage-model
+        , matrix
+        , vector
     hs-source-dirs:   lib
     default-language: GHC2021
 
@@ -37,7 +43,9 @@ executable codebooks
     -- other-extensions:
     build-depends:
         base ^>=4.17.0.0,
-        codebooks
+        codebooks,
+        fgl,
+        containers
 
     hs-source-dirs:   app
     default-language: GHC2021
